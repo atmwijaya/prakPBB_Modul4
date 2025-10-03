@@ -1,6 +1,7 @@
 import { ResepMakanan } from "../data/makanan";
 import { ResepMinuman } from "../data/minuman";
 import HeroSection from "../components/home/HeroSection";
+import FavouriteSection from "../components/home/FavouriteSection";
 import FeaturedMakananSection from "../components/home/FeaturedMakananSection";
 import FeaturedMinumanSection from "../components/home/FeaturedMinumanSection";
 export default function HomePage() {
@@ -17,6 +18,7 @@ blue-50 via-white to-indigo-50 pb-20 md:pb-8"
         className="max-w-7xl mx-auto px-4 md:px-8
 space-y-12 md:space-y-16"
       >
+        <FavouriteSection favouriteRecipes={[...featuredMakanan, ...featuredMinuman]} />
         <FeaturedMakananSection featuredMakanan={featuredMakanan} />
         <FeaturedMinumanSection featuredMinuman={featuredMinuman} />
       </main>
